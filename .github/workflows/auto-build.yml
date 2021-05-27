@@ -27,9 +27,10 @@ jobs:
         gitbook build
         cp SUMMARY.md _book
         
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
-      env:
-        ACTIONS_DEPLOY_KEY: ${{secrets.TOKEN}}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: _book
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@3.6.2
+      with:
+          ACCESS_TOKEN: ${{ secrets.TOKEN }} #secrets.ACCESS_TOKEN是项目配置的密钥
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: _book # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
