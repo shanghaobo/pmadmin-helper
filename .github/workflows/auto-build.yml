@@ -1,0 +1,36 @@
+name: auto-generate-gitbook
+on:
+  [push]
+
+jobs:
+  main-to-gh-pages:
+    runs-on: ubuntu-latest
+        
+    steps:                          
+    - name: checkout main
+      uses: actions/checkout@v2
+      with:
+        ref: master
+            
+    - name: install nodejs
+      uses: actions/setup-node@v1
+      
+    - name: configue gitbook
+      run: |
+        npm install -g gitbook-cli          
+        gitbook install
+        npm install -g gitbook-summary
+                
+    - name: generate _book folder
+      run: |
+        book sm
+        gitbook build
+        cp SUMMARY.md _book
+        
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@3.6.2
+      with:
+          ACCESS_TOKEN: ${{ secrets.TOKEN }} #secrets.ACCESS_TOKEN是项目配置的密钥
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: _book # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
