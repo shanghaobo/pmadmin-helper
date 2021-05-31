@@ -2,5 +2,11 @@
   "title": "PmAdmin帮助文档",
   "author": "shanghaobo",
   "description": "PmAdmin帮助文档",
-  "language": "zh-hans"
+  "language": "zh-hans",
+  "plugins": ["baidu-tongji"],
+  "pluginsConfig": {
+    "baidu-tongji": {
+      "token": "ae27f235aa543d10d00179fbd3de3818"
+    }
+  }
 }
