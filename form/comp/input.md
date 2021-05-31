@@ -28,7 +28,7 @@
 
 ### 回车 tran_type
 
-在输入框内回车后执行的交易。[交易说明](start.md#交易)
+在输入框内回车后执行的交易。[交易说明](../base.md#交易)
 
 <img src="../../img/form/input3.png" width="50%">
 
