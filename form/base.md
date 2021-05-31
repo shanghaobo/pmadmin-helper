@@ -33,9 +33,9 @@
 
 ### 交易
 
-`api` 和 `tran_type` 两个参数确定一个交易（后台接口）。
-例子：api 为`/interface/sys/menu`,tran_type 为`get_menu_list`。
-其中`interface`为固定头部，后边的`sys/menu`对应后台 app 目录下的`sys`目录下的`menu.py`，`get_menu_list`对应`menu.py`内的`get_menu_list`函数。
+- `api` 和 `tran_type` 两个参数确定一个交易（后台接口）。
+- 例如 api 为`/interface/sys/menu`,tran_type 为`get_menu_list`。
+- 其中`interface`为固定头部，后边的`sys/menu`对应后台 app 目录下的`sys`目录下的`menu.py`，`get_menu_list`对应`menu.py`内的`get_menu_list`函数。
 
 ```
 ├── admin_app
