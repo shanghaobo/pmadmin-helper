@@ -2,6 +2,8 @@
 
 > PmAdmin 是一个配置化开发平台，可通过在线配置实现零代码快速开发。开发技术栈为 Vue.js 和 Django，集成了表单设计器、流程设计器、大屏设计器、报表设计器等模块。
 
+[在线阅读](https://shanghaobo.github.io/pmadmin-helper)
+
 文档整理中，目前已完善文档页面
 
 - [x] 介绍
