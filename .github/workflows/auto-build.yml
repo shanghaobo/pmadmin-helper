@@ -32,3 +32,13 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: _book # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
+    
+    - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@v2.1.1
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "_book"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: "/home/gitbook/_book"
