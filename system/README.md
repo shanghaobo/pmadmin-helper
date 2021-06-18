@@ -5,3 +5,4 @@
 - [机构管理](org.md)
 - [菜单配置](menu.md)
 - [数据字典](data-dict.md)
+- [数据源管理](data-source.md)
