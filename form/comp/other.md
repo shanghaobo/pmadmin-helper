@@ -122,7 +122,7 @@ order by create_time desc
 点击表格顶部的删除按钮时执行的 sql。例如：
 
 ```sql
-delete from test_table where id=$[selected]
+delete from test_table where id=$[id]
 ```
 
 ### 按钮开关
